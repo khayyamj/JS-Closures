@@ -69,13 +69,21 @@ makeCall('435-215-9248');
 properly. */
 
 //Code Here
+function makeCounter() {
+  var counters = 0;
+  return function () {
+    console.log(counters);
+    counters++;
+    return counters;
+  }
+}
 
 //Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+  var count = makeCounter();
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
@@ -100,10 +108,19 @@ the module pattern to achieve this. */
 function counterFactory(value) {
 
   // Code here.
+  var counter = value;
+  var obj = {
+    inc: function() {
+      counter++;
+      return counter;
+    },
+    dec: function() {
+      counter--;
+      return counter;
+    }
+  };
 
-
-  return {
-  }
+  return obj;
 }
 
 
