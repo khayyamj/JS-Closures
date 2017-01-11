@@ -145,13 +145,15 @@ will return 'You're doing awesome, keep it up firstname lastname.' */
 
 function motivation(firstname, lastname){
 
-  var welcomeText = 'You\'re doing awesome, keep it up ';
+  var welcomeText = "You're doing awesome, keep it up ";
 
   // code message function here.
+  function message(first, last){
+    return (welcomeText + firstname + " " + lastname + ".");
+  }
 
-
-  //Uncommment this to return the value of your invoked message function
-  //return message();
+  // Uncommment this to return the value of your invoked message function
+  return message();
 
 }
 
