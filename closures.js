@@ -193,12 +193,15 @@ var module = (function() {
 
   return {
     // Code here.
+     publicMethod: function(){
+      return privateMethod();
+     }
   };
 
 })();
 
 // Uncomment this after you create your public method
-//   module.publicMethod();
+module.publicMethod();
 
 
 
